@@ -37,3 +37,9 @@ Persönliche Daten werden im lokalen Browser-Speicher gespeichert (bei Bildern I
 - Responsiv für iPhone und Desktop, Hell-/Dunkelmodus, PWA-Manifest und Service Worker
 - API-/Netzwerkzugriff erforderlich für aktuelle Feeds und externe Karten/Wetter
 - **Prototypen:** vor produktivem Einsatz oder Veröffentlichung mit echten Daten bitte weitere Tests durchführen
+
+## Events nach Datum (Version 2)
+
+Der neue Tab **Events** zeigt Veranstaltungen direkt in der App. Datum wählen, Heute/Morgen oder sieben Tage ab Datum einstellen, Kategorie und Suche nutzen, Veranstaltung direkt in Meine Pläne übernehmen. Die Events werden als echte Termine (nicht Veröffentlichungsdaten von Nachrichten) aus öffentlich erreichbaren strukturierten Feeds von Evensos und Goethe-Universität Frankfurt übernommen. Eine Quelle kann zeitweise ausfallen oder nur einen Teil der Events anbieten. Keine behauptete Vollständigkeit oder Live-Garantie.
+
+Für den automatischen Import muss die Datei `.github/workflows/deploy.yml` im Repository existieren und der Workflow einmal erfolgreich laufen. Er führt `scripts/fetch_events.py` aus und veröffentlicht `data/events.json`. Bei fehlenden Daten wird der letzte erfolgreiche Feed beibehalten. Die App benötigt keine persönlichen Kalenderberechtigungen. Der Original-Link erscheint optional nur zur Prüfung/Anmeldung; die Eventdetails stehen direkt in der App.
